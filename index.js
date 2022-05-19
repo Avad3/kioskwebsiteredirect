@@ -1,13 +1,8 @@
 const windowOpen = document.getElementById('windowopen');
-const popupWindowOpen = document.getElementById('popupwindowopen');
+const aHref = document.getElementById('link');
 
 windowOpen.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    window.open(windowOpen.value)
+    aHref.href = windowOpen.value;
   }
 });
-popupWindowOpen.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    window.open(popupWindowOpen.value, 'testing', 'width=600px,height=600px')
-  }
-})
